@@ -1,0 +1,21 @@
+.back-ground {
+  position: absolute;
+  inset: -1em;
+  background-color: #000;
+  background-image: radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent 60%),
+                    radial-gradient(circle, rgba(255, 255, 0, 0.5), transparent 60%);
+  background-size: 150% 150%;
+  opacity: 0.8;
+  animation: bg-move 15s linear infinite, flicker 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes bg-move {
+  0% { background-position: 200% 200%; }
+  100% { background-position: 0% 0%; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.6; }
+}
